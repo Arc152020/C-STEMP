@@ -1,0 +1,150 @@
+@font-face{
+    font-family: christabel;
+    src: local("arial"), 
+    url('../src/assets/font/Varela-Regular.ttf')
+    format("truetype");
+
+}
+/* Body tag CSS*/
+body{
+    margin:0;
+    padding:0;
+    font-weight: 14pt;
+    font-family: christabel;
+    color:#464646;
+   
+}
+#root{
+    margin-top: 5px;
+}
+/* Header styling */
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    top:0px;
+}
+header{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    background: #fff;
+    font-family: christabel;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: end;
+    border-bottom: 2px solid maroon;
+    padding-bottom: 20px;
+}
+
+header a{
+    text-decoration: none;
+    font-size: 14pt;
+    color:#464646;
+}
+
+.enrol{
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+    padding: 4px 10px;
+    text-decoration: none;
+    font-size: 14pt;
+    color:#464646;
+}
+.enrol:hover{
+    color: white;
+    background: yellowgreen;
+}
+
+/* Home page styling */
+.container{
+    background-image: url('../src/assets/img/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 90%;
+    height: 800px;
+    text-align: center;
+    border: 1px solid white;
+    margin-top: 170px;
+   
+}
+
+.textline{
+font-size: 5em;
+}
+
+.subtextline{
+    font-size:2em;
+}
+
+/* Footer page styling */
+.footer-container{
+    background-color:#464646;
+    width: 100%;
+    height: 200px;
+    margin-top: 7px;
+    color:cornsilk;
+    font-size: 10pt;
+}
+
+.top{
+    width: 100%;
+    height: 150px;
+}
+
+.top-content{
+    width: 60%;
+    margin: 5px auto;
+    height:100%;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.top-content address {
+    font-style: normal;
+    padding:2px;
+}
+
+.top-content a{
+    color:cornsilk;
+    text-decoration: none;
+}
+
+form>*{
+    display:inline;
+}
+
+.bottom{
+    background-color: rgba(15, 15, 15, 0.685);
+    width: 100%;
+    height: 50px
+}
+ .bottom-content{
+     display:flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+     width: 60%;
+     margin: 0 auto;
+ }
+ .copyright{
+   
+    margin:0;
+    padding:0;
+ }
+ .social-media-icons{
+    
+    margin:0;
+    padding:4px;
+ }
+ .social-media-icons > img{
+     margin: 2px;
+     border-radius: 7px;
+ }
+
+ 

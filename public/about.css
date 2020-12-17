@@ -1,0 +1,20 @@
+.about-container{
+    width: 60%;
+    min-height:100%;
+    height:600px;
+    margin: 100px auto;
+    text-align: left;
+    margin-top: 200px;   
+
+}
+
+.about-container p {
+    font-size: 14pt;
+    padding: 10px;
+    
+}
+
+.about-container h2 {
+    text-align: center;
+    font-weight: bold;
+}
