@@ -1,19 +1,117 @@
+
+/* Smartphones and smaller screen devices 320px */
 .course-container{
-    width: 60%;
-    min-height:100%;
-    height:600px;
-    margin: 100px auto;
-    text-align: left;
-    margin-top: 200px;
-    
-   
+    width: 100%;
+    height:100%;
+    min-width: 320px;
+    min-height:600px;
+    margin: 1px auto;
+    text-align: justify;
+    margin-top: 110px; 
+    padding:20px 0;  
 }
 
 dt{
     font-weight: bolder;
-    font-size: 14pt;
+    font-size: 9pt;
+    text-indent: 2px;
 }
 h3{
     text-align: center;
-    font-size:18pt;
+    font-size:14pt;
+}
+.front, .back, .graphic, .airv, .mobile, .digitalMarketing, .python{
+    margin: 10px auto;
+    box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.course-container .enrol{
+    width: 100%;
+    margin: 10px auto;
+    color:rgb(49, 1, 1); 
+}
+
+.course-container .enrol:hover{
+    color: rgb(236, 230, 230);
+    background: rgb(255, 167, 167);
+    font-size:10pt;
+}
+
+
+/* Ipads and Tablets */
+@media only screen and (min-width:768px){
+.course-container{
+        width: 80%;
+        height:100%;
+        min-width: 768px;
+        min-height:600px;
+        margin: 1px auto;
+        text-align: justify;
+        margin-top: 110px; 
+        padding:20px 0; 
+        box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
+    }
+    
+  dt{
+        font-weight: bolder;
+        font-size: 14pt;
+    }
+    h3{
+        text-align: center;
+        font-size:16pt;
+    }
+    .course-container .enrol{
+        width: 100%;
+        margin: 10px auto;
+        color:rgb(49, 1, 1); 
+    }
+    
+    .course-container .enrol:hover{
+        color: rgb(236, 230, 230);
+        background: rgb(255, 167, 167);
+        font-size:13pt;
+    }
+}
+
+
+/* Desktop and Bigger Screens */
+@media only screen and (min-width:1366px){
+    .course-container{
+        width: 100%;
+        height:100%;
+        min-height:1300px;
+        margin: 100px auto;
+        text-align: left;
+        margin-top: 200px; 
+    }
+    
+    dt{
+        font-weight: bolder;
+        font-size: 14pt;
+    }
+    h3{
+        text-align: center;
+        font-size:18pt;
+    }
+    .front, .back, .graphic, .airv, .mobile, .digitalMarketing, .python{
+       
+        margin: 10px auto;
+        padding: 20px;
+        width: 100%;
+        
+    }
+    
+    .course-container .enrol{
+       
+        margin: 15px auto;
+        color:rgb(49, 1, 1);  
+    }
+    
+    .course-container .enrol:hover{
+        color: rgb(236, 230, 230);
+        background: rgb(255, 167, 167);
+        font-size:16pt;
+    }
+    
 }

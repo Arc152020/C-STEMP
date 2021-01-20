@@ -1,0 +1,202 @@
+
+/* Smartphones and smaller screen devices 320px */
+.form-page{
+    width:100%;
+    height: 100%;
+    min-height:500px;
+    margin:0px auto;
+    background-image: url('../src/assets/img/enrol.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #464646; 
+    padding: 5px;
+    font-size:10pt;
+
+}
+
+.form-content{
+    width:90%;
+    height:100%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    background:rgb(231, 230, 230);
+    border-radius:3px;
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}    
+
+.form-content a{
+    border: 1px solid maroon;
+    border-radius: 5px;
+    padding: 4px 10px;
+    color:rgb(49, 1, 1); 
+}
+
+.cform-content{
+    margin:5px auto;
+    width:80%;
+    height:100%;
+    padding: 8px;
+    background:rgb(231, 230, 230);
+    border-radius:2px;
+}
+
+.cform-content a{
+    text-decoration: none;
+    color:rgb(49, 1, 1); 
+    border: 1px solid maroon;
+    border-radius: 5px;
+    margin-top:5px;
+    padding: 4px 10px;
+    display:block;
+    text-align: center;
+}
+
+.cform-content fieldset{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 90%;
+}
+
+input, label{
+    margin-top:3px;
+}
+
+.form-content form{
+    width:100%;
+    height:100%;
+    margin: 10px auto;
+
+}
+
+
+/* Ipads and Tablets */
+@media only screen and (min-width:768px){
+    .form-page{
+        width:100%;
+        height: 100%;
+        min-height:900px;
+        margin-top:0;
+        background-image: url('../src/assets/img/enrol.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #464646; 
+        padding: 10px;
+    
+    }
+    
+    .form-content{
+        width:50%;
+        height:100%;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        background:rgb(231, 230, 230);
+        border-radius:3px;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items:center;
+    
+    }    
+    
+    .cform-content{
+        margin:5px auto;
+        width:50%;
+        height:100%;
+        padding: 30px;
+        background:rgb(231, 230, 230);
+        border-radius:2px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+       
+    }
+    
+    fieldset{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly; 
+    }
+    .form-content form{
+        width:90%;
+        height:100%;
+        margin: 10px auto;
+    
+    }
+
+}
+
+/* Desktop and Bigger Screens */
+@media only screen and (min-width:1366px){
+    .form-page{
+        width:100%;
+        height: 100%;
+        min-height:900px;
+        margin-top:0;
+        background-image: url('../src/assets/img/enrol.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #464646; 
+        padding: 10px;
+    
+    }
+    
+    .form-content{
+        width:50%;
+        height:100%;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        background:rgb(231, 230, 230);
+        border-radius:3px;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items:center;
+    
+    }    
+    
+    .cform-content{
+        margin:5px auto;
+        width:50%;
+        height:100%;
+        padding: 30px;
+        background:rgb(231, 230, 230);
+        border-radius:2px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+       
+    }
+    
+    fieldset{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly; 
+    }
+    .form-content form{
+        width:90%;
+        height:100%;
+        margin: 10px auto;
+    
+    }
+}

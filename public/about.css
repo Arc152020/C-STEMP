@@ -1,20 +1,113 @@
-.about-container{
-    width: 60%;
-    min-height:100%;
-    height:600px;
-    margin: 100px auto;
-    text-align: left;
-    margin-top: 200px;   
 
+/* Smartphones and smaller screen devices 320px */
+.about-container{
+    width: 100%;
+    height:100%;
+    min-height:450px;
+    padding-top:20px;
+    margin-top: 100px;  
+    margin-bottom:10px; 
+    background-color: rgb(245, 241, 241);
+}
+
+.about-content{
+    width: 80%;
+    height:450px;
+    margin: 2px auto;
+    text-align: left;
+    box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
+    padding:10px;
+    border-radius:4px;
+    background-color: rgb(255, 250, 250);
 }
 
 .about-container p {
-    font-size: 14pt;
+    font-size: 9pt;
     padding: 10px;
+    text-align: justify; 
+    line-height: 1.4em; 
     
 }
 
+
 .about-container h2 {
     text-align: center;
-    font-weight: bold;
+    font-size: 10pt;
 }
+
+
+/* Ipads and Tablets */
+@media only screen and (min-width:768px){
+        .about-container{
+            width: 100%;
+            height:100%;
+            min-height:450px;
+            padding-top:20px;
+            margin-top: 120px;   
+        }
+        
+        .about-content{
+            width: 80%;
+            height:600px;
+            margin: 2px auto;
+            text-align: left;
+            padding:20px;
+            border-radius:4px;
+            background-color: rgb(255, 250, 250);
+        }
+         
+        .about-container p {
+            font-size: 13pt;
+            padding: 10px;
+            text-align: justify; 
+            line-height: 1.4em; 
+        }
+        
+        .about-container h2 {
+            text-align: center;
+            font-size: 14pt;
+        }
+
+    }
+
+
+    /* Desktop and Bigger Screens */
+    @media only screen and (min-width:1366px){
+            .about-container{
+                width: 100%;
+                height:100%;
+                min-height:800px;
+                padding-top:15px;
+                margin-top: 140px;   
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover; 
+            }
+            
+            .about-content{
+                width: 60%;
+                min-height:100%;
+                height:600px;
+                margin: 100px auto;
+                text-align: left;
+                margin-top: 100px;   
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                
+                padding:7px;
+                border-radius:4px;
+            }
+             
+            .about-container p {
+                font-size: 14pt;
+                padding: 10px;
+                text-align: justify;
+            }
+            
+            .about-container h2 {
+                text-align: center;
+                font-size: 16pt;
+            }
+
+        }

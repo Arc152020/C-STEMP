@@ -1,0 +1,79 @@
+
+/* Smartphones and smaller screen devices 320px */
+.contact-page{
+    width:100%;
+    height: 100%;
+    margin-top: 130px;
+    min-height: 590px;
+}
+
+.contact-content{
+    width:90%;
+    margin: 10px auto;
+    box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
+    padding:10px;
+}
+
+.contact-pane{
+    margin-bottom: 10px;
+}
+
+.right{
+    
+    height:100%;
+    padding: 10px;
+    box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+
+ /* Ipads and Tablets */
+@media only screen and (min-width:768px){
+    .contact-page{
+        width:100%;
+        height: 100%;
+        margin-top: 130px;
+    }
+    
+}
+
+/* Desktop and Bigger Screens 
+@media only screen and (min-width:1366px){
+    .contact-page{
+        width:100%;
+        height: 100%;
+        margin-top: 200px;
+    }
+    
+    .contact-content{
+        width:80%;
+        margin: 15px auto;
+    }
+    
+    .contact-pane{
+        display:flex;
+        justify-content: space-evenly;
+        margin-bottom: 100px;
+    }
+    
+    .left{
+        width: 40%;
+        padding: 15px;
+    }
+    .right{
+        width: 30%;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-evenly;
+        padding: 10px;
+        box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
+        border-radius: 3px;
+    }
+    
+    .right >*{
+        margin: 8px 0;
+    }
+    
+    .left dl{
+        margin-top: 40px;
+    }*/

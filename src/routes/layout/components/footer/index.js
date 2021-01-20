@@ -1,16 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import env from 'react-dotenv';
+import firebase from '../../../enrol/firebase';
 
 
 
 function footer(){
+
+    const [email, setEmail ] = useState('');
+    const ref = firebase.firestore().collection("Newsletter");
+
+    function handleEmail(event){
+        setEmail(prevEmail => { return event.target.value } );
+    }
+
+    function subscribe(e){
+        e.preventDefault();
+        ref.add({email:email}).then(docRef =>{
+            setEmail(prevEmail => {return ""})
+        }).catch(error => {
+            console.error(error);
+        })
+        
+    }
     return(
         <div className="footer-container">
             <footer className="top">
                 <div className="top-content">
                     <address>
-                    <p>Plot 5 Citrus Estate New Abuja, Plateau State, Nigeria</p>
+                    <p> Location: <br />Plot 5 Citrus Estate New Abuja, Plateau State, Nigeria</p>
                     <p>Email: marcus.simon@cstemp.org</p>
                     <p>Phone: 08034477604</p>
                     </address>
@@ -21,19 +38,22 @@ function footer(){
                        <a href="https://www.cstemp.org"> C-STEMP Organisation</a> <br />
                        <a href="https://www.cstempedutech.com">C-STEMP EduTech</a> <br />
                        <a href="https://www.siteworx.ng.com">C-STEMP Siteworx</a> <br />
-                       <a href="https://otukpo.cstemp.org">C-STEMP Otukpo Innovation Hub</a> <br />
+                       <a href="https://innovate.cstemp.org/otukpo/">C-STEMP Otukpo Innovation Hub</a> <br />
                   </div>
                   <div className="courses">
-                       <h4>Courses</h4>
-                       <Link to="/register">Frontend Web Development</Link> <br />
-                       <Link to="/register">Backend Web Development</Link> <br />
-                       <Link to="/register">Graphic and UI/UX Design</Link> <br />
-                       <Link to="/register">AR/VR and Robotics </Link> <br /> 
+                       <h4>Our Trainings</h4>
+                       <Link to="/enrol">Frontend Web Development</Link> <br />
+                       <Link to="/enrol">Backend Web Development</Link> <br />
+                       <Link to="/enrol">Graphic and UI/UX Design</Link> <br />
+                       <Link to="/enrol">Python Programming</Link> <br />
+                       <Link to="/enrol">Mobile Apps Development</Link> <br />
+                       <Link to="/enrol">Digital Marketing</Link> <br />
+                       <Link to="/enrol">AR/VR and Drones Technology </Link> <br /> 
                     </div> 
 
-                <form action='/subscribe'>
-                    <label>Subscribe to our Newsletter </label>
-                    <input type="text" placeholder="name@gmail.com" width="15" />
+                <form onSubmit={subscribe} >
+                    <label>Join our Newsletter </label><br />
+                    <input type="text" placeholder="evelynsimon@gmail.com" value={email} onChange={handleEmail}/>
                     <button>Subscribe</button>
                 </form>
 
@@ -42,13 +62,13 @@ function footer(){
             </footer>
             <footer className="bottom">
                     <div className="bottom-content">
-                        <p className="copyright">&copy; 2021 C-STEMP LTD</p>
+                        <p className="copyright">&copy; 2021 C-STEMP Ltd/Gte</p>
                     
                         <p className="social-media-icons">
-                            <img src='/src/assets/img/fb.png' className="fb" />
-                            <img src='/src/assets/img/twitter.png' className="tw" />
-                            <img src='/src/assets/img/instagram.png' className="ig" />
-                            <img src='/src/assets/img/link.png' className="li" />
+                            <a href="https://www.facebook.com/C-Stemp-Innovation-Centre-106411324587971"> <img src='/src/assets/img/fb.png' className="fb" /></a>
+                            <a href=""> <img src='/src/assets/img/twitter.png' className="tw" /></a>
+                            <a href="https://www.instagram.com/_cstempinnovationcentre/"> <img src='/src/assets/img/instagram.png' className="ig" /></a>
+                            <a href=""> <img src='/src/assets/img/link.png' className="li" /></a>
                         </p>
                     </div>
 

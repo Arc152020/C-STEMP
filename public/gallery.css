@@ -1,0 +1,166 @@
+
+/* Smartphones and smaller screen devices 320px */
+.gallery{
+    background:white;
+    width: 100%;
+    height:100%;
+    margin-top:180px;
+}
+
+.gallery-container{
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+}
+
+.slider{
+     position:relative;
+     height:108vh;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+
+.image {
+    width:1000px; 
+    height:600px;
+    border-radius: 7px;
+}
+
+.right-arrow{
+    position: absolute;
+    top:50%; 
+    right:10px;
+    font-size: 3em;
+    color:#000;
+    z-index:2;
+    cursor: pointer; 
+    user-select: none;
+}
+
+.left-arrow{
+    position: absolute;
+    top:50%; 
+    left:10px;
+    font-size: 3em;
+    color:#000;
+    z-index:2;
+    cursor: pointer; 
+    user-select: none;
+}
+
+.slide{
+   opacity:0;
+   transition-duration: 1s ease; 
+}
+
+.slide.active{
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
+
+
+/* Ipads and Tablets */
+@media only screen and (min-width:768px){
+    .gallery{
+        background:white;
+        width: 100%;
+        height:100%;
+        margin-top:180px;
+    }
+    
+    .gallery-container{
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .slider{
+         position:relative;
+         height:110vh;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         
+    }
+    
+    .image {
+        width:1000px; 
+        height:600px;
+        border-radius: 7px;
+    }
+    
+    .right-arrow{
+        position: absolute;
+        top:50%; 
+        font-size: 3em;
+        z-index:2;
+        cursor: pointer; 
+        user-select: none;
+    }
+    
+    .left-arrow{
+        position: absolute;
+        top:50%; 
+        font-size: 3em;
+        z-index:2;
+        cursor: pointer; 
+        user-select: none;
+    }
+    
+    .slide{
+       opacity:0;
+       transition-duration: 1s ease; 
+    }
+    
+    .slide.active{
+        opacity: 1;
+        transition-duration: 1s;
+        transform: scale(1.08);
+    }    
+}
+
+/* Desktop and Bigger Screens */
+@media only screen and (min-width:1366px){
+    .gallery{
+        background:white;
+        width: 100%;
+        height:100%;
+        margin-top:180px;
+    }
+    
+    .gallery-container{
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+   
+    }
+    
+    .slider{
+         position:relative;
+         height:100vh;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         
+    }
+    
+    
+    .right-arrow{
+        position: absolute;
+        top:50%; 
+        font-size: 3em;
+        cursor: pointer; 
+        user-select: none;
+    }
+    
+    .left-arrow{
+        position: absolute;
+        top:50%; 
+        font-size: 3em;
+        cursor: pointer; 
+        user-select: none;
+    }
+}

@@ -11,7 +11,8 @@ import Layout from './routes/layout/index';
 import About from './routes/about/index';
 import Course from './routes/course/index';
 import Gallery from './routes/gallery/index';
-import Contact from './routes/contact/index'
+import Contact from './routes/contact/index';
+import Form from './routes/enrol/form';
 
 
 
@@ -24,6 +25,7 @@ function App(){
                     <Route path='/course'><Layout component={ <Course /> } /></Route>
                     <Route path='/gallery'><Layout component={ <Gallery /> } /></Route>
                     <Route path='/contact'><Layout component={ <Contact /> } /></Route>
+                    <Route path='/enrol'><Layout component={ <Form />} /></Route>
             </Switch>
             
         </div>

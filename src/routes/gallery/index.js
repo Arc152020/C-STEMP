@@ -1,9 +1,15 @@
 import React from 'react';
+import ImageSlider from './imageSlider';
+import { galleryData } from './gallery-data';
 
 
 function gallery(){
     return(
-        <h3> Hello from gallery page </h3>
+        <div className ="gallery">
+            <main className="gallery-container">
+                <ImageSlider slides={galleryData} />
+            </main>
+        </div>
     )
 }
 

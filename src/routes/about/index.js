@@ -4,6 +4,8 @@ import React from 'react';
 function about(){
     return (
         <div className="about-container">
+        <div className="about-content">
+        
             <h2>About us</h2>
             <p>
             C-STEMP Innovation Hub is born out of the need for more 
@@ -19,6 +21,7 @@ function about(){
             <p>Our mission is to equip our trainees with tools necessary to survive and thrive in the digital world.</p>
             <h2>Objective</h2>
             <p>Regardless of background, our goal is to help you learn, Earn, Enhance your life</p>
+        </div>
         </div>
         
     )
