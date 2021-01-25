@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import firebase from '../../routes/enrol/firebase';
+import {GiHouse } from 'react-icons/gi';
+import { HiOutlineMail } from "react-icons/hi";
+import { FiPhone } from "react-icons/fi";
 
 
 function contact(){
@@ -8,7 +11,7 @@ function contact(){
     const [ subject, setSubject ] = useState('');
     const [ message, setMessage ] = useState('');
 
-    const ref = firebase.firestore().collection("Contact");
+   
 
     function handleChange(event){
         const { name, value } = event.target;
@@ -23,24 +26,33 @@ function contact(){
 
     function forward(e){
         e.preventDefault();
-        ref.add({
-            name: yourname,
-            email: youremail,
-            subject: subject,
-            message: message 
-        }).then(docRef =>{
-            document.querySelector(".status").innerHTML = "<p>Your message has been forwarded successfully</p>";
-            setYourname(prevYourname => {return ""});
-            setYouremail(prevYouremail => {return ""});
-            setSubject(prevSubject => {return ""});
-            setMessage(prevMessage => {return ""});
-        }).catch(error => {
-                document.querySelector(".status").innerHTML = "<p>Oops! Error occured while forwarding you message </p>";
+        try{
+            var result = firebase.firestore().collection("Contact").doc(youremail).set({
+                name: yourname,
+                email: youremail,
+                subject: subject,
+                message: message,
+                timestamp: firebase.firestore.Timestamp.fromDate(new Date())
+            });
+            
+                result.then(docRef =>{
+                document.querySelector(".status").innerHTML = `<p id="success">Your message has been sent successfully</p>`;
+               
+            })}
+            
+            catch(err){
+            result.catch(error => {
+                    document.querySelector(".status").innerHTML = `<p id="failure">Oops! Error occured, Please retry again </p>`;
+                }
+            );}
+            finally{
+                setYourname(prevYourname => {return ""});
+                setYouremail(prevYouremail => {return ""});
+                setSubject(prevSubject => {return ""});
+                setMessage(prevMessage => {return ""});
             }
-        );
-    }
-    return(
-        
+        }
+    return( 
         <div className="contact-page">
             <div className="contact-content">
                 <div className="status"></div>
@@ -48,17 +60,17 @@ function contact(){
                 <div className="contact-pane">
                     <aside className="left">
                         <dl>
-                            <dt>Our Address</dt>
+                            <dt> <GiHouse /> </dt>
                             <dd>Plot 5 Citrus Estate New Abuja, Plateau State, Nigeria</dd>
                         </dl>
                         <dl>
-                            <dt>Email us</dt>
+                            <dt> <HiOutlineMail /> </dt>
                             <dd>info@cstemp.org</dd>
                             <dd>nenji.emmanuel@cstemp.org</dd>
                         </dl>
 
                         <dl>
-                            <dt>Call us</dt>
+                            <dt> <FiPhone /> </dt>
                             <dd>+234 901 1093 828</dd>
                             <dd>+234 706 0775 977</dd>
                         </dl>

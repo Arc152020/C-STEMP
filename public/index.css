@@ -48,10 +48,18 @@
             font-size: 9pt;
             color: #464646; 
         }
+        header .logo{
+            width:150px;
+            height:40px;
+            min-width: 100px;
+            min-height: 80px;
+            margin-top:10px;
+        }
+        
         .enrol-header{
             border: 1px solid maroon;
             border-radius: 10px;
-            font-size:8pt;
+            font-size:9pt;
             padding: 2px 5px;
             text-decoration: none;
             color: #464646; 
@@ -63,14 +71,14 @@
             border-radius: 10px;
             padding: 4px 10px;
             text-decoration: none;
-            font-size: 8pt;
+            font-size: 9pt;
             color:#ffffff;
             transition: font-size 500ms ease-in-out, color 500ms ease-in-out;
         }
         .enrol-header:hover,.enrol:hover{
             color: rgb(236, 230, 230);
             background: rgb(255, 167, 167);
-            font-size:9pt;
+            font-size:11pt;
         }
         
          /*Home page styling */
@@ -90,6 +98,7 @@
         
         .container h3{
         font-size: 3em;
+       
         }
         
         .container p{
@@ -270,6 +279,7 @@
         
         .container p{
             font-size:1.5em;
+
         }
         
         /* Footer page styling */
@@ -284,7 +294,7 @@
         
         .top{
             width: 100%;
-            height: 70px;
+            height: 40px;
            
         }
         
@@ -350,6 +360,8 @@
             margin: 1px;
             border-radius: 7px;
         }
+
+        
         }
     }
 
@@ -358,31 +370,17 @@
     @supports(display:grid) and (display:flex){
     /* Body tag CSS*/
     body{
-        margin:0;
-        padding:0;
-        font-weight: 14pt;
-        font-family: christabel;
-        color:#464646;
-       
+        font-size: 14pt;
+        font-family: christabel; 
     }
-    #root{
-        margin-top: 5px;
-    }
-    /* Header styling */
     
+    /* Header styling */
     .fixed{
-        position: fixed;
-        width: 100%;
         height: 150px;
-        top:0px;
-        z-index: 3;
     }
+
     header{
-        width: 100%;
         height: 130px;
-        text-align: center;
-        background: #fff;
-        font-family: christabel;
         display:flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -393,57 +391,42 @@
     }
     
     header a{
-        text-decoration: none;
         font-size: 14pt;
-        color: #464646; 
     }
+
     .enrol-header{
-       
         border-radius: 10px;
         padding: 4px 10px;
         text-decoration: none;
         font-size: 14pt;
-        color: #464646; 
-        transition: font-size 500ms ease-in-out, color 500ms ease-in-out;
     }
     
      .enrol{
-       
-        border-radius: 10px;
-        padding: 4px 10px;
-        text-decoration: none;
         font-size: 14pt;
         color:#ffffff;
         transition: font-size 500ms ease-in-out, color 500ms ease-in-out;
     }
     .enrol-header:hover,.enrol:hover{
-       
         font-size:16pt;
     }
     
     /* Home page styling */
     .container{
-        background-image: url('../src/assets/img/bg2.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 100%;
         min-height: 90%;
         height: 800px;
         text-align: center;
-        border: 1px solid white;
-        margin-top: 150px;
-        color: white;
-       
+        margin-top: 150px;  
+        
     }
     
     .container h3{
     font-size: 5em;
-    
-    
+    margin-bottom:1px;
+    padding: 20px; 
     }
     
     .container p{
+        margin-bottom:15px;
         font-size:2em;
     }
     
@@ -452,14 +435,12 @@
         background-color:#464646;
         width: 100%;
         height: 10%;
-        margin-top: 7px;
-        color:cornsilk;
         font-size: 10pt;
     }
     
     .top{
         width: 100%;
-        height: 250px;
+        height: 10px;
        
     }
     
@@ -476,10 +457,6 @@
         padding:2px;
     }
     
-    .top-content a{
-        color:cornsilk;
-        text-decoration: none;
-    }
     
     form{
         height:15px;
@@ -505,17 +482,12 @@
          flex-direction: row;
          flex-wrap: nowrap;
          justify-content: space-between;
-         width: 60%;
+         width: 80%;
          margin: 0 auto;
          border-top: 1px solid maroon;
      }
-     .copyright{
-       
-        margin:0;
-        padding:0;
-     }
-     .social-media-icons{
-        
+    
+     .social-media-icons{ 
         margin:0;
         padding:4px;
         }

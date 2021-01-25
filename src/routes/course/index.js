@@ -23,7 +23,7 @@ function course(){
                         </ul>
                     </dd>
                 </dl>
-                <Link to='/enrol' className="enrol">Enrol for Frontend Web Development Training</Link>
+                <Link to='/enrol' className="enrol">Enrol for Web Devs (Frontend)</Link>
             </div>
 
             <div className="back">  
@@ -44,7 +44,7 @@ function course(){
                         </ul>
                     </dd>
                 </dl>
-                <Link to='/enrol' className="enrol">Enrol for Backend Web Development Training</Link>
+                <Link to='/enrol' className="enrol">Enrol for Web Devs (Backend)</Link>
             </div>
 
             <div className="graphic"> 
@@ -61,14 +61,13 @@ function course(){
                         </ul>
                     </dd>
                 </dl>
-                <Link to='/enrol' className="enrol">Enrol for Graphics and UI/UX Design Training</Link>
+                <Link to='/enrol' className="enrol">Enrol for Graphics | UI/UX Design</Link>
             </div>
 
             <div className="mobile"> 
             <figure>
                 <img src="/src/assets/img/flutter.png" alt="Flutter Logo" />
-                <img src="/src/assets/img/phones.png" alt="Phones" />
-                
+                <img src="/src/assets/img/phones.png" alt="Flutter Logo" />
              
             </figure> 
                 <dl>
@@ -81,12 +80,12 @@ function course(){
                         </ul>
                     </dd>
                 </dl>
-                <Link to='/enrol' className="enrol">Enrol for Mobile Development Training</Link>
+                <Link to='/enrol' className="enrol">Enrol for Mobile Apps Devs</Link>
             </div>
 
             <div className="python"> 
             <figure>
-                <img src="/src/assets/img/pythonlogo.jpeg" alt="Flutter Logo" />
+                <img src="/src/assets/img/pythonlogo.png" alt="Flutter Logo" />
                
             </figure> 
                 <dl>
@@ -99,7 +98,7 @@ function course(){
                         </ul>
                     </dd>
                 </dl>
-                <Link to='/enrol' className="enrol">Enrol for Python Programming Training</Link>
+                <Link to='/enrol' className="enrol">Enrol for Python Programming </Link>
             </div>
 
 
@@ -118,7 +117,7 @@ function course(){
                         </ul>
                     </dd>
                 </dl>
-                <Link to='/enrol' className="enrol">Enrol for Digital Marketing Training</Link>
+                <Link to='/enrol' className="enrol">Enrol for Digital Marketing </Link>
             </div>
 
 
@@ -130,7 +129,7 @@ function course(){
                 <img src="/src/assets/img/drones.png" alt="Drone Logo" />
             </figure> 
                 <dl>
-                    <dt>AR/VR and Drones Technology Training</dt>
+                    <dt>AR/VR and Drone Technology Training</dt>
                     <dd>
                     <ul>
                             <li>Augmented Reality, Virtual Reality and Drone Technology </li>
@@ -139,7 +138,7 @@ function course(){
                         </ul>
                     </dd>
                 </dl>
-                <Link to='/enrol' className="enrol">Enrol for AR/VR and Drones Training</Link>
+                <Link to='/enrol' className="enrol">Enrol for AR/VR | Drone Technology</Link>
             </div>
 
         </div>

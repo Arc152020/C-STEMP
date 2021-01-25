@@ -1,6 +1,5 @@
 import React, { useState, Fragment, useEffect, useContext } from 'react';
 import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
-import {v4 as uuidv4 } from 'uuid';
 import  enrolContext from './enrolContext';
 import firebase from './firebase';
 
@@ -19,7 +18,6 @@ const CourseInfo = () => {
 
         useEffect(() => {
             update({course})
-            console.log(person)
         }, [course]);
         
     return (
@@ -28,17 +26,19 @@ const CourseInfo = () => {
                 <legend>Choose Course to enrol</legend>
                 <select name="course" value={course} onChange={selectCourse} >
                     <option value="">--- Choose Course ---</option>
-                    <option value="web development (frontend)">Frontend Web Programming</option>
-                    <option value="web development (backend)">Backend Web Programming</option>
-                    <option value="graphic design and UI/UX">Graphic and UI/UX Design </option>
-                    <option value="mobile app development">Mobile Apps Development </option>
-                    <option value="python programming">Python Programming </option>
-                    <option value="digital marketing">Digital Marketing </option>
-                    <option value="ar/vr and drone technology">AR/VR and Drones Technology </option>
+                    <option value="Web Development (Frontend)">Frontend Web Programming</option>
+                    <option value="Web Development (Backend)">Backend Web Programming</option>
+                    <option value="Graphic Design and UI/UX">Graphic and UI/UX Design </option>
+                    <option value="Mobile App Development">Mobile Apps Development </option>
+                    <option value="Python Programming">Python Programming </option>
+                    <option value="Digital Marketing">Digital Marketing </option>
+                    <option value="AR/VR and Drone Technology">AR/VR and Drones Technology </option>
                 </select>
+
+                <Link to={`${url}/personalinfo`}>Save and Continue</Link>
             </fieldset>
             
-            <Link to={`${url}/personalinfo`}>Save and Continue</Link>
+            
         </Fragment>
     );
 }
@@ -66,7 +66,6 @@ const PersonalInfo = () => {
 
     useEffect(() => {
          update({firstName, lastName, dob, gender});
-        console.log(person);
     }, [firstName, lastName, dob, gender]);
 
     return (
@@ -79,12 +78,13 @@ const PersonalInfo = () => {
                     <label>Date of Birth</label>
                     <input type="date" placeholder="Date of Birth" name="dob" onChange={handleChange} value={dob} />
                     <label>Gender: &nbsp;
-                    <input type="radio" name="gender" value="male" onChange={handleChange} checked={gender === "male"}/>Male &nbsp;
-                    <input type="radio" name="gender" value="female" onChange={handleChange} checked={gender === "female"} />Female</label>
-
-                </fieldset>
+                    <input type="radio" name="gender" value="Male" onChange={handleChange} checked={gender === "Male"}/>Male &nbsp;
+                    <input type="radio" name="gender" value="Female" onChange={handleChange} checked={gender === "Female"} />Female</label>
+                   
                     <Link to="/enrol">Go back to Previous</Link>
                     <Link to={`/enrol/contactinfo`}>Save and Continue</Link>
+                </fieldset>
+                    
             </section>
         </Fragment>
     
@@ -113,7 +113,6 @@ const ContactInfo = () => {
 
     useEffect(() => {
         update({phone, email, address, city, state});
-        console.log(person);
     }, [phone, email, address, city, state]);
     
     return (
@@ -168,9 +167,10 @@ const ContactInfo = () => {
                             <option value="Yobe">Yobe</option>
                             <option value="Zamfara">Zamfara</option>
                         </select>
+
+                        <Link to={`/enrol/personalinfo`}>Go back to Previous</Link>
+                        <Link to={`/enrol/educationinfo`}>Save and Continue</Link>
                     </fieldset>
-                <Link to={`/enrol/personalinfo`}>Go back to Previous</Link>
-                <Link to={`/enrol/educationinfo`}>Save and Continue</Link>
             </section>
         </Fragment>
 );}
@@ -186,7 +186,6 @@ const EducationInfo = () => {
 
         useEffect(() => {
             update({education});
-            console.log(person);
         }, [education]);
         
     return(
@@ -198,13 +197,14 @@ const EducationInfo = () => {
                     <select name="course">
                     <option value="">--- Choose Qualification ---</option>
                     <option value="O'level">WAEC/NECO/NABTECH</option>
-                    <option value="diploma/nce">ND/OND/NCE</option>
-                    <option value="degree/hnd">BSC/HND</option>
-                    <option value="master">Postgraduate Degree</option>
+                    <option value="Diploma/NCE">ND/OND/NCE</option>
+                    <option value="Degree/HND">BSC/HND</option>
+                    <option value="Master Degree">Postgraduate Degree</option>
                 </select>
-                </fieldset>
+
                 <Link to={`/enrol/contactinfo`}>Go back to Previous</Link>
                 <Link to={`/enrol/parentguardianinfo`}>Save and Continue</Link>  
+                </fieldset>
             </section>
         </Fragment>
 
@@ -236,7 +236,6 @@ const ParentGuadianInfo = () => {
 
     useEffect(() => {
         update({pgfirstname, pglastname, pgphone, pgemail, pgaddress, pgoccupation});
-        console.log(person);
     }, [pgfirstname, pglastname, pgphone, pgemail, pgaddress, pgoccupation ]);
    
     return (
@@ -280,7 +279,6 @@ const OtherInfo = () =>{
     }
     useEffect(() => {
         update({onsitevirtual, josornot, laptopornot, techlevel });
-        console.log(person);
     }, [onsitevirtual, josornot, laptopornot, techlevel]);
     return (
     <Fragment>
@@ -299,52 +297,59 @@ const OtherInfo = () =>{
 }
 
 const Preview = () => {
-    const [person, update ] = useContext(enrolContext);
-    const ref = firebase.firestore().collection("Enrol");
-    
+    const [person ] = useContext(enrolContext);
+
         function paystack(e){
             e.preventDefault();
 
-            ref.add({
-               address: person.address,
-               city: person.city,
-               course: person.course,
-               dob: person.dob,
-               education: person.education,
-               email: person.email,
-               firstname: person.firstName,
-               gender: person.gender,
-               ictlevel: person.techlevel,
-               injos: person.josornot === "liveinjos"? true : false,
-               lastname: person.lastName,
-               ownlaptop: person.laptopornot === "havelaptop"? true : false,
-               pgaddress: person.pgaddress,
-               pgemail: person.pgemail,
-               pgfirstname: person.pgfirstname,
-               pglastname: person.pglastname,
-               pgoccupation: person.pgoccupation,
-               pgphone: person.pgphone,
-               phone: person.phone,
-               preferclass: person.onsitevirtual,
-               state: person.state
-
-            }).then(docRef =>{
-                document.querySelector(".status").innerHTML = `<p>Document saved successfully: ${docRef.id} </p>`;
-                setTimeout(()=> { window.location.href = `https://paystack.com/pay/acd4p70uzk`; }, 4000 );
-            }).catch(error => {
-                document.querySelector(".status").innerHTML  = `<p>Ops! Error Occur while adding document</p>`;
-            });
+            try{
+                var result =  firebase.firestore().collection("Enrol").doc(person.email).set({
+                    address: person.address,
+                    city: person.city,
+                    course: person.course,
+                    dob: person.dob,
+                    education: person.education,
+                    email: person.email,
+                    firstname: person.firstName,
+                    gender: person.gender,
+                    ictlevel: person.techlevel,
+                    injos: person.josornot === "liveinjos"? true : false,
+                    lastname: person.lastName,
+                    ownlaptop: person.laptopornot === "havelaptop"? true : false,
+                    pgaddress: person.pgaddress,
+                    pgemail: person.pgemail,
+                    pgfirstname: person.pgfirstname,
+                    pglastname: person.pglastname,
+                    pgoccupation: person.pgoccupation,
+                    pgphone: person.pgphone,
+                    phone: person.phone,
+                    preferclass: person.onsitevirtual,
+                    state: person.state,
+                    timestamp: firebase.firestore.Timestamp.fromDate(new Date())
+                });
+                
+                result.then(docRef =>{
+                document.querySelector(".status").innerHTML = `<p id="success">Document saved successfully...</p>`;
+               if(window.confirm("Submitted! \n Do You want to proceed to make payment now?"))
+                window.location.href = `https://paystack.com/pay/acd4p70uzk`; 
+            })}
             
-            }
-        
+            catch(err){
+                result.catch(error => {
+                document.querySelector(".status").innerHTML  = `<p id="failure">Ops! Error Occur while adding document</p>`;
+            })
+            }}
+            
            
         return (
         <section className="cform-content">
             <div className="status"></div>
             <button onClick={()=> window.print()}>Print</button>
-            <h4>Application ID:  </h4>
+            <img src="/src/assets/img/logo.png" alt="cstemp-logo" className="img"/>
+            <h4 className="headline">C-STEMP INNOVATION HUB JOS</h4>
+            <h3 class="subheadline">Enrolment Form</h3>
             <ul>
-                <li><b> Course:</b> {person.course}</li>
+                <li><b>Course:</b> {person.course}</li>
                 <li><b>First Name:</b> {person.firstName}</li>
                 <li><b>Last Name:</b> {person.lastName}</li>
                 <li><b>Date of Birth:</b> {person.dob}</li>
@@ -365,13 +370,15 @@ const Preview = () => {
                 <li><b>Parent/Guardian Residential Address:</b> {person.pgaddress}</li>
                 <li><b>Parent/Guardian Occupation:</b> {person.pgoccupation}</li>
                 <hr />
-                <li><b>How you intend to attend training?</b> {person.onsitevirtual}</li>
+                <li><b>How do you intend to attend training?</b> {person.onsitevirtual}</li>
                 <li><b>Are you currently living in Jos?</b> {person.josornot === "liveinjos" ? "Yes" : "No"}</li>
                 <li><b>Do you own a laptop?</b> {person.laptoporno === "havelaptop" ? "Yes" : "No"}</li>
                 <li><b>What is your ICT/Tech background level?</b>  {person.techlevel === "beginner" ? "Beginner" : person.techlevel === "intermediate" ? "Intermediate" : "Advance"}</li>
             </ul>
+
+            <p>{new Date().toUTCString()}</p>
             <Link to={`/enrol/otherinfo`}>Go back to Previous</Link>
-            <button onClick={paystack}>Save and Proceed to make Payment</button>
+            <button onClick={paystack}>Submit and Proceed to make Payment</button>
         </section>
         );
 };
@@ -390,7 +397,7 @@ export default function Form(){
         return (
             <div className="form-page">
                 <section className="form-content">
-                    <h3>Enrollment Form</h3>
+                  
                  <form>
                      <enrolContext.Provider value={[person, update]}>
                         <CourseInfo />

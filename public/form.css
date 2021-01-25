@@ -66,6 +66,12 @@
     width: 90%;
 }
 
+.cform-content .img{
+    width:110px;
+    height:40px;
+    margin:7px auto;
+}
+
 input, label{
     margin-top:3px;
 }
@@ -77,6 +83,9 @@ input, label{
 
 }
 
+.subheadline{
+    text-decoration: underline;
+}
 
 /* Ipads and Tablets */
 @media only screen and (min-width:768px){
@@ -135,8 +144,42 @@ input, label{
         width:90%;
         height:100%;
         margin: 10px auto;
-    
     }
+
+    .status{
+        width:100%;
+        margin: 7px auto;
+        text-align: center;
+    }
+
+    #success{
+        color:lightgreen;
+        font-size:12pt;
+    }
+    #failure{
+        color:rgb(243, 199, 1);
+    }
+
+    .headline{
+        font-size:14pt;
+        text-align: center;
+        font-weight: bolder;
+    }
+    .subheadline{
+        margin:0px auto;
+        font-weight: normal;
+    }
+    .img{
+        width:50%;
+        margin:7px auto;
+    }
+    button{
+        margin-top: 7px;
+        border: 1px solid maroon;
+        border-radius: 7px;
+        padding: 4px 10px;
+    }
+
 
 }
 

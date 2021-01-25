@@ -27,5 +27,10 @@ export const galleryData = [
     {   image:"/src/assets/img/gallery/hippy.jpg",
         alt:"hippy pic"
 
-    }
+    },
+
+    {   image:"/src/assets/img/gallery/about.jpg",
+    alt:"Work station Setup"
+
+}
 ];

@@ -1,35 +1,47 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../../enrol/firebase';
+import {GiHouse } from 'react-icons/gi';
+import { HiOutlineMail } from "react-icons/hi";
+import { FiPhone } from "react-icons/fi";
 
 
 
 function footer(){
 
     const [email, setEmail ] = useState('');
-    const ref = firebase.firestore().collection("Newsletter");
-
+    
     function handleEmail(event){
         setEmail(prevEmail => { return event.target.value } );
     }
 
     function subscribe(e){
         e.preventDefault();
-        ref.add({email:email}).then(docRef =>{
-            setEmail(prevEmail => {return ""})
-        }).catch(error => {
-            console.error(error);
-        })
-        
+
+        try{
+        var result = firebase.firestore().collection("Newsletter").doc(email).set({email:email});
+        result.then(docRef =>{
+            document.querySelector(".status").innerHTML = `<p id="success">Thanks for Subscribing</p>`
+
+        })}
+
+        catch(err){
+        result.catch(error => {
+            document.querySelector(".status").innerHTML = `<p id="failure">Please Try again</p>`
+        })}
+        finally{
+        setEmail(prevEmail => {return ""});
+        }
+
     }
     return(
         <div className="footer-container">
             <footer className="top">
                 <div className="top-content">
                     <address>
-                    <p> Location: <br />Plot 5 Citrus Estate New Abuja, Plateau State, Nigeria</p>
-                    <p>Email: marcus.simon@cstemp.org</p>
-                    <p>Phone: 08034477604</p>
+                    <p> <GiHouse /> Plot 5 Citrus Estate New Abuja, Plateau State, Nigeria</p>
+                    <p><HiOutlineMail /> nenji.emmanuel@cstemp.org</p>
+                    <p> <FiPhone /> +234 901 1093 828</p>
                     </address>
                    
                    
@@ -55,6 +67,7 @@ function footer(){
                     <label>Join our Newsletter </label><br />
                     <input type="text" placeholder="evelynsimon@gmail.com" value={email} onChange={handleEmail}/>
                     <button>Subscribe</button>
+                    <div className="status"></div>
                 </form>
 
 
@@ -66,9 +79,9 @@ function footer(){
                     
                         <p className="social-media-icons">
                             <a href="https://www.facebook.com/C-Stemp-Innovation-Centre-106411324587971"> <img src='/src/assets/img/fb.png' className="fb" /></a>
-                            <a href=""> <img src='/src/assets/img/twitter.png' className="tw" /></a>
+                            <a href="#"> <img src='/src/assets/img/twitter.png' className="tw" /></a>
                             <a href="https://www.instagram.com/_cstempinnovationcentre/"> <img src='/src/assets/img/instagram.png' className="ig" /></a>
-                            <a href=""> <img src='/src/assets/img/link.png' className="li" /></a>
+                            <a href="#"> <img src='/src/assets/img/link.png' className="li" /></a>
                         </p>
                     </div>
 
