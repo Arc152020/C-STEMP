@@ -1,10 +1,11 @@
 
 /* Smartphones and smaller screen devices 320px */
 .gallery{
-    background:white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(3rem);
     width: 100%;
     height:100%;
-    margin-top:180px;
+    margin-top:104px;
 }
 
 .gallery-container{
@@ -15,7 +16,7 @@
 
 .slider{
      position:relative;
-     height:108vh;
+     height:100vh;
      display:flex;
      justify-content: center;
      align-items: center;
@@ -65,10 +66,10 @@
 /* Ipads and Tablets */
 @media only screen and (min-width:768px){
     .gallery{
-        background:white;
+       
         width: 100%;
         height:100%;
-        margin-top:180px;
+        margin-top:128px;
     }
     
     .gallery-container{
@@ -125,10 +126,9 @@
 /* Desktop and Bigger Screens */
 @media only screen and (min-width:1366px){
     .gallery{
-        background:white;
         width: 100%;
         height:100%;
-        margin-top:180px;
+        margin-top:147px;
     }
     
     .gallery-container{

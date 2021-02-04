@@ -24,6 +24,8 @@ h3{
     margin: 10px auto;
     box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
     padding: 20px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(3rem);
 }
 
 .course-container .enrol{
@@ -33,8 +35,8 @@ h3{
 }
 
 .course-container .enrol:hover{
-    color: rgb(236, 230, 230);
-    background: rgb(255, 167, 167);
+    color: #464646; 
+    background:white;
     font-size:10pt;
 }
 
@@ -68,8 +70,8 @@ h3{
     }
     
     .course-container .enrol:hover{
-        color: rgb(236, 230, 230);
-        background: rgb(255, 167, 167);
+        color: #464646; 
+        background:white;
         font-size:13pt;
     }
 }
@@ -110,8 +112,8 @@ h3{
     }
     
     .course-container .enrol:hover{
-        color: rgb(236, 230, 230);
-        background: rgb(255, 167, 167);
+        color: #464646; 
+        background:white;
         font-size:16pt;
     }
     

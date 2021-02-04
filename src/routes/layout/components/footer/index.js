@@ -75,7 +75,7 @@ function footer(){
             </footer>
             <footer className="bottom">
                     <div className="bottom-content">
-                        <p className="copyright">&copy; 2021 C-STEMP Ltd/Gte</p>
+                        <p className="copyright">&copy; 2021 C-STEMP Ltd/Gtee</p>
                     
                         <p className="social-media-icons">
                             <a href="https://www.facebook.com/C-Stemp-Innovation-Centre-106411324587971"> <img src='/src/assets/img/fb.png' className="fb" /></a>

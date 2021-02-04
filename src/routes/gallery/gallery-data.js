@@ -31,6 +31,7 @@ export const galleryData = [
 
     {   image:"/src/assets/img/gallery/about.jpg",
     alt:"Work station Setup"
-
-}
+    },
+    {   image:"/src/assets/img/gallery/vr.jpg",
+    alt:"Work station Setup"}
 ];

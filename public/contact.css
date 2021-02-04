@@ -12,6 +12,8 @@
     margin: 10px auto;
     box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
     padding:18px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(3rem);
 
 }
 

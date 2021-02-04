@@ -13,6 +13,7 @@
             font-size: 9pt;
             font-family: christabel;
             color:#464646;
+            background-color: #ECEFF1;
            
         }
        #root{
@@ -32,7 +33,8 @@
             width: 100%;
             height: 91px;
             text-align: center;
-            background: #fff;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+            backdrop-filter: blur(3rem);
             font-family: christabel;
             display:flex;
             flex-direction: column;
@@ -76,8 +78,8 @@
             transition: font-size 500ms ease-in-out, color 500ms ease-in-out;
         }
         .enrol-header:hover,.enrol:hover{
-            color: rgb(236, 230, 230);
-            background: rgb(255, 167, 167);
+            color: #464646; 
+            background: white;
             font-size:11pt;
         }
         
@@ -111,7 +113,7 @@
             width: 100%;
             height: 20%;
             margin-top: 1px;
-            color:cornsilk;
+            color:#ECEFF1;
             font-size: 6pt;
         }
         
@@ -134,7 +136,7 @@
         }
         
         .top-content a{
-            color:cornsilk;
+            color:#ECEFF1;
             text-decoration: none;
         }
         
@@ -217,7 +219,8 @@
             width: 100%;
             height: 100px;
             text-align: center;
-            background: #fff;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+            backdrop-filter: blur(3rem);
             font-family: christabel;
             display:flex;
             flex-direction: row;
@@ -249,12 +252,12 @@
             padding: 4px 10px;
             text-decoration: none;
             font-size: 12pt;
-            color:#ffffff;
+            color:#ECEFF1;
             transition: font-size 500ms ease-in-out, color 500ms ease-in-out;
         }
         .enrol-header:hover,.enrol:hover{
-            color: rgb(236, 230, 230);
-            background: rgb(255, 167, 167);
+            color: #464646; 
+            background:white;
             font-size:13pt;
         }
         
@@ -270,7 +273,7 @@
             text-align: center;
             border: 1px solid white;
             margin-top: 120px;
-            color: white; 
+            color: #ECEFF1;
         }
         
         .container h3{
@@ -288,7 +291,7 @@
             width: 100%;
             height: 10%;
             margin-top: 2px;
-            color:cornsilk;
+            color:#ECEFF1;
             font-size: 9pt;
         }
         
@@ -313,7 +316,7 @@
         }
         
         .top-content a{
-            color:cornsilk;
+            color:#ECEFF1;
             text-decoration: none;
         }
         
@@ -403,7 +406,7 @@
     
      .enrol{
         font-size: 14pt;
-        color:#ffffff;
+        color:#ECEFF1;
         transition: font-size 500ms ease-in-out, color 500ms ease-in-out;
     }
     .enrol-header:hover,.enrol:hover{

@@ -7,7 +7,7 @@
     padding-top:10px;
     margin-top: 100px;  
     margin-bottom:5px; 
-    background-color: rgb(245, 241, 241);
+    background-color: #ECEFF1;
 }
 
 .about-content{
@@ -17,7 +17,7 @@
     box-shadow: 2px 2px 20px 8px rgba(0,0,0,0.1);
     padding:7px;
     border-radius:4px;
-    background-color: rgb(255, 250, 250);
+    background-color: white;
 }
 
 .about-container p {
@@ -55,7 +55,7 @@
             text-align: left;
             padding:20px;
             border-radius:4px;
-            background-color: rgb(255, 250, 250);
+         
         }
          
         .about-container p {
@@ -81,7 +81,7 @@
                 height:100%;
                 min-height:800px;
                 margin-top: 140px;   
-                background-color: rgb(245, 241, 241);
+                background-color: #ECEFF1;
             }
             
             .about-content{
@@ -91,6 +91,8 @@
                 margin: 100px auto;
                 margin-top: 50px;   
                 padding: 20px;
+                background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+                backdrop-filter: blur(3rem);
             }
              
             .about-container p {
